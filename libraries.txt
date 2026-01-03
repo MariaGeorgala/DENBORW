@@ -1,4 +1,4 @@
-pip install python-dotenv transformers torch
+pip install python-dotenv transformers torch openai
 
 python manage.py makemigrations
 python manage.py migrate
