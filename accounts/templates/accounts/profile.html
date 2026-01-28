@@ -6,7 +6,6 @@
 <div class="profile-wrapper mood-{{ current_mood }}">
   <div class="profile-card">
 
-    <!-- HEADER -->
     <div class="profile-header">
       <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
@@ -28,8 +27,6 @@
         🕒 Μέλος από {{ user.date_joined|date:"d/m/Y" }}
       </span>
     </div>
-
-    <!-- BODY -->
     <div class="profile-body">
 
       <div class="mood-summary">
@@ -94,7 +91,6 @@
 <div id="toast" class="toast"></div>
 
 <style>
-/* ===== LAYOUT ===== */
 .profile-wrapper{
   display:flex;
   justify-content:center;
