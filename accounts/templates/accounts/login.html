@@ -126,12 +126,12 @@
         }
 
         .password-wrapper input {
-            padding-left: 40px;
+            padding-left: 20px;
         }
 
         .toggle-password {
             position: absolute;
-            right: 14px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
@@ -226,9 +226,7 @@
 </head>
 
 <body>
-
 <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
-
 <div class="login-container">
 
     <div class="mini-logo">🌸</div>
@@ -240,10 +238,8 @@
             <div class="error-message">{{ message }}</div>
         {% endfor %}
     {% endif %}
-
     <form method="POST">
         {% csrf_token %}
-
         <label>Όνομα Χρήστη</label>
         <input type="text" name="username" required>
 
@@ -252,7 +248,6 @@
             <input type="password" name="password" id="password" required>
             <span class="toggle-password" onclick="togglePassword()"></span>
         </div>
-
         <div class="remember">
             <input type="checkbox" name="remember">
             Να με θυμάσαι
@@ -282,6 +277,5 @@
         input.type = input.type === "password" ? "text" : "password";
     }
 </script>
-
 </body>
 </html>
