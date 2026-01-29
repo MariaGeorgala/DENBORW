@@ -11,15 +11,12 @@ from mood.llm import (
 
 MAX_QUESTIONS = 5
 
-
 def home(request):
     return render(request, "diary/home.html")
-
 
 @login_required
 def log_mood(request):
 
-    # Αρχικοποίηση session
     if "answers" not in request.session:
         request.session["answers"] = []
         request.session["step"] = 1
